@@ -10,7 +10,7 @@ public class Queue {
         queue = new ArrayDeque<Task>();
     }
 
-    public Task getFirstTask() {
+    public synchronized Task getFirstTask() {
         return this.queue.pollFirst();
     }
 
@@ -19,7 +19,7 @@ public class Queue {
         return this.queue.size();
     }
 
-    public void add(Task tmp) {
+    public synchronized void add(Task tmp) {
         this.queue.add(tmp);
     }
 }

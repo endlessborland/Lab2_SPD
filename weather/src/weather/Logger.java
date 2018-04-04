@@ -15,9 +15,11 @@ public class Logger {
     public void print()
     {
         Task tmp;
-        for (int i = 0; i < this.outQueue.size(); i++)
+        int outQueueSize = this.outQueue.size();
+        for (int i = 0; i < outQueueSize; i++)
         {
             tmp = this.outQueue.getFirstTask();
+            System.out.println("ID: " + tmp.getID());
             System.out.println("City: " + tmp.getCity());
             System.out.println("Temperature: " + tmp.getWeather());
             System.out.println("Date " + tmp.getDate());

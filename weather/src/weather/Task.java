@@ -3,16 +3,21 @@ package weather;
 import java.util.Date;
 
 public class Task {
-    public String getCity() {
-        return city;
+
+    public final int getID() {
+        return this.id;
     }
 
-    public Date getDate() {
-        return date;
+    public final String getCity() {
+        return this.city;
     }
 
-    public Integer getWeather() {
-        return weather;
+    public final Date getDate() {
+        return this.date;
+    }
+
+    public final Integer getWeather() {
+        return this.weather;
     }
 
     private String city;
