@@ -17,6 +17,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
         DataSource dataSource = new DataSource();
+        dataSource.init();
         TaskGenerator taskGenerator = new TaskGenerator(NUMBER_OF_TASKS_TO_GENERATE);
         Queue inQueue = new Queue();
         taskGenerator.setInQueue(inQueue);

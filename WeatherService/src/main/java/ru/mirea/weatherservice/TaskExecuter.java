@@ -2,6 +2,7 @@ package ru.mirea.weatherservice;
 
 import ru.mirea.weatherdata.DataSource;
 
+import javax.xml.crypto.Data;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class TaskExecuter extends Thread{
@@ -48,7 +49,6 @@ public class TaskExecuter extends Thread{
      }
  */
     private void execTask(Task tmp) {
-        int randomNum = ThreadLocalRandom.current().nextInt(-273, 273 + 1);
-        tmp.setWeather(randomNum);
+        tmp.setWeather(source.fetchWeather(tmp.getCity(), tmp.getDate()));
     }
 }

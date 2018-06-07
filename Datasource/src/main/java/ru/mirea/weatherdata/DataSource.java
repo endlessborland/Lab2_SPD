@@ -27,10 +27,10 @@ public class DataSource implements DataSourceAPI {
         int i = (location + String.valueOf(t)).hashCode() % 4;
 
         switch (abs(i)) {
-            case 0: result = "Sunny " + r.nextInt() % 20 + 10 + " degrees"; break;
-            case 1: result = "Cloudy " + r.nextInt() % 15 + 10 + " degrees"; break;
-            case 2: result = "Rain " + r.nextInt() % 15 + 10 + " degrees"; break;
-            case 3: result = "Snow -" + r.nextInt() % 25 + 5 + " degrees"; break;
+            case 0: result = "Sunny " + (Math.abs(r.nextInt()) % 20 + 10) + " degrees"; break;
+            case 1: result = "Cloudy " + (Math.abs(r.nextInt()) % 15 + 10) + " degrees"; break;
+            case 2: result = "Rain " + (Math.abs(r.nextInt()) % 15 + 10) + " degrees"; break;
+            case 3: result = "Snow -" + (Math.abs(r.nextInt()) % 25 + 5) + " degrees"; break;
         }
         return result;
     }

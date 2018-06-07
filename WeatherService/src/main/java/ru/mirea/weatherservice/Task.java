@@ -16,13 +16,13 @@ public class Task {
         return this.date;
     }
 
-    public final Integer getWeather() {
+    public final String getWeather() {
         return this.weather;
     }
 
     private String city;
     private Date date;
-    private Integer weather;
+    private String weather;
     private int id;
 
     public Task(int id) {
@@ -39,7 +39,7 @@ public class Task {
     }
 
 
-    public void setWeather(Integer weather) {
+    public void setWeather(String weather) {
         this.weather = weather;
     }
 }
